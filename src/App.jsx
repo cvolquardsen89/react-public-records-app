@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Request from './pages/Request';
 import Payment from './pages/Payment';
 import Support from './pages/Support';
+import Terms from './pages/Terms';
+import Confirmation from './pages/Confirmation';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -17,6 +19,8 @@ function App() {
           <Route path="/request" element={<Request />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/confirmation" element={<Confirmation />} />
         </Routes>
       </main>
       <Footer />
