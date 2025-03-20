@@ -12,6 +12,8 @@ function Navbar() {
             <Link to="/request" className="hover:text-blue-200 transition-colors">Request</Link>
             <Link to="/payment" className="hover:text-blue-200 transition-colors">Payment</Link>
             <Link to="/support" className="hover:text-blue-200 transition-colors">Support</Link>
+            <Link to="/terms" className="hover:text-blue-200 transition-colors">Terms</Link>
+            <Link to="/confirmation" className="hover:text-blue-200 transition-colors">Confirmation</Link>
           </div>
         </div>
       </div>
