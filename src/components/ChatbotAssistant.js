@@ -13,13 +13,28 @@ const ChatbotAssistant = () => {
         setMessages([...messages, { text: input, sender: "user" }]);
         setInput("");
 
-        // Simulated bot response
-        setTimeout(() => {
+        // Send message to backend and get response
+        fetch('/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: input })
+        })
+        .then(response => response.json())
+        .then(data => {
             setMessages((prevMessages) => [
                 ...prevMessages,
-                { text: "I'm here to help with record requests!", sender: "bot" }
+                { text: data.response, sender: "bot" }
             ]);
-        }, 1000);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            setMessages((prevMessages) => [
+                ...prevMessages,
+                { text: "Sorry, I couldn't get a response from the server.", sender: "bot" }
+            ]);
+        });
     };
 
     return (
