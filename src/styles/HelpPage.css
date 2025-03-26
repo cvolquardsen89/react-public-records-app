@@ -1,0 +1,29 @@
+.help-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.faq-section {
+    margin-top: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 10px;
+    font-size: 16px;
+}
