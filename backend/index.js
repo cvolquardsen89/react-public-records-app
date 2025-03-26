@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+require('dotenv').config();
 
 const app = express();
 const port = 3001;
@@ -7,7 +8,7 @@ const port = 3001;
 app.use(express.json());
 
 // Replace with your actual API Key
-const API_KEY = "AIzaSyD1BHYffPDsdObmV9nJfBXaQ10FXeiocDY";
+const API_KEY = process.env.GEMINI_API_KEY;
 
 const geminiApi = async (prompt) => {
     try {
