@@ -24,6 +24,13 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      {/* Floating AI Chatbot Button */}
+      <button
+        className="fixed bottom-6 right-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg"
+        onClick={() => alert('AI Chatbot')}
+      >
+        AI Chatbot
+      </button>
     </div>
   );
 }
