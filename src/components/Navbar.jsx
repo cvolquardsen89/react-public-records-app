@@ -6,14 +6,15 @@ function Navbar() {
     <nav className="bg-blue-600 text-white shadow-lg">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold">Public Records</div>
+          <div className="text-xl font-bold">
+            <Link to="/" className="hover:text-blue-200 transition-colors">Public Records App</Link>
+          </div>
           <div className="space-x-6">
             <Link to="/" className="hover:text-blue-200 transition-colors">Home</Link>
-            <Link to="/request" className="hover:text-blue-200 transition-colors">Request</Link>
-            <Link to="/payment" className="hover:text-blue-200 transition-colors">Payment</Link>
-            <Link to="/support" className="hover:text-blue-200 transition-colors">Support</Link>
-            <Link to="/terms" className="hover:text-blue-200 transition-colors">Terms</Link>
-            <Link to="/confirmation" className="hover:text-blue-200 transition-colors">Confirmation</Link>
+            <Link to="/request" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors">Start Request</Link>
+            <Link to="/help" className="hover:text-blue-200 transition-colors">Help &amp; Support</Link>
+            <Link to="/contact" className="hover:text-blue-200 transition-colors">Contact</Link>
+                        
           </div>
         </div>
       </div>
