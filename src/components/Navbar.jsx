@@ -13,8 +13,7 @@ function Navbar() {
             <Link to="/" className="hover:text-blue-200 transition-colors">Home</Link>
             <Link to="/request" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors">Start Request</Link>
             <Link to="/help" className="hover:text-blue-200 transition-colors">Help &amp; Support</Link>
-            <Link to="/contact" className="hover:text-blue-200 transition-colors">Contact</Link>
-                        
+            <Link to="/status" className="hover:text-blue-200 transition-colors">Track Request</Link>
           </div>
         </div>
       </div>
