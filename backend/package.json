@@ -12,6 +12,6 @@
   "description": "",
   "dependencies": {
     "express": "^4.21.2",
-    "@google-cloud/aiplatform": "^4.0.0"
+    "axios": "^1.6.8"
   }
 }
