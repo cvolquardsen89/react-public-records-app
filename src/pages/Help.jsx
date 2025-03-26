@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-function Help() {
+function HelpPage() {
   return (
     <div>
       <Navbar />
@@ -39,4 +39,4 @@ function Help() {
   );
 }
 
-export default Help;
+export default HelpPage;
