@@ -1,30 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Terms() {
+  const [agreed, setAgreed] = useState(false);
+
   return (
-    <div>
-      <h1>Terms of Service &amp; Disclaimer</h1>
-      <p>
-        Please read these terms carefully before using our service.
-      </p>
-      <h2>Disclaimer</h2>
-      <p>
-        Not all records will contain full information due to government
-        redactions.
-      </p>
-      <h2>Refund Policy</h2>
-      <p>
-        Refunds are only granted if the requested records do not exist or if
-        users did not receive what they expected. Refund requests must be sent
-        via support email with transaction ID &amp; request details.
-      </p>
-      <h2>Data Privacy Policy</h2>
-      <p>
-        User request data is stored for 72 hours after submission. Data
-        automatically deleted after refund period expires. Complies with data
-        protection laws (GDPR, CCPA, etc.). Stored logs help with disputes or
-        legal issues.
-      </p>
+    <div className="max-w-3xl mx-auto py-10">
+      <h2 className="text-2xl font-bold mb-4">Terms of Service</h2>
+      <p>Please read and agree to the terms before proceeding.</p>
+      <textarea
+        readOnly
+        value="Terms and conditions go here..."
+        className="w-full border p-2 mb-4"
+      />
+      <label className="flex items-center">
+        <input
+          type="checkbox"
+          checked={agreed}
+          onChange={() => setAgreed(!agreed)}
+          className="mr-2"
+        />
+        I agree to the terms and conditions.
+      </label>
+      <button
+        disabled={!agreed}
+        className={`mt-4 px-4 py-2 rounded ${agreed ? 'bg-blue-600 text-white' : 'bg-gray-400 text-gray-700'}`}
+      >
+        Proceed
+      </button>
     </div>
   );
 }
